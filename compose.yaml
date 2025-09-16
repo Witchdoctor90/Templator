@@ -1,0 +1,7 @@
+﻿services:
+  templator.webapi:
+    image: templator.webapi
+    build:
+      context: .
+      dockerfile: Templator.WebApi/Dockerfile
+
