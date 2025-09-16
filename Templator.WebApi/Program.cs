@@ -16,6 +16,18 @@ public class Program
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
         builder.Services.AddInfrastructure(builder.Configuration);
+        
+        builder.Services.AddCors(options =>
+        {
+            options.AddPolicy(name: "AllowFrontend",
+                policy =>
+                {
+                    policy.WithOrigins("http://localhost:3000")  
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
+                });
+        });
+        
         builder.Services.AddControllers();
         builder.Services.AddValidatorsFromAssemblyContaining<TemplateDataValidator>();
         
@@ -31,6 +43,7 @@ public class Program
             app.UseSwagger();
             app.UseSwaggerUI();
         }
+        app.UseCors("AllowFrontend");
         app.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
         
         app.Run();

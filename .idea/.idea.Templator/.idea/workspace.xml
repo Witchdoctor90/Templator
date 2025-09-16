@@ -10,19 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1202be58-ccc9-4ac6-8132-d45ac5824881" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Templator.WebApi/Controllers/TemplateController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Templator.WebApi/DTOs/TemplateCreateDTO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Templator.WebApi/Middleware/ErrorHandlingMiddleware.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Templator.WebApi/TemplateDataValidator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Templator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Templator/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templator.Application/Interfaces/ITemplateManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Templator.Application/Interfaces/ITemplateManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templator.Application/Services/TemplateManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Templator.Application/Services/TemplateManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templator.Infrastructure/DB/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Templator.Infrastructure/DB/ApplicationDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templator.Infrastructure/DependencyInjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Templator.Infrastructure/DependencyInjection.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Templator.WebApi/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Templator.WebApi/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templator.WebApi/Templator.WebApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Templator.WebApi/Templator.WebApi.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templator.WebApi/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/Templator.WebApi/appsettings.Development.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templator.WebApi/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Templator.WebApi/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,7 +185,7 @@
       <workItem from="1758006546175" duration="781000" />
       <workItem from="1758008594636" duration="1289000" />
       <workItem from="1758010295224" duration="13445000" />
-      <workItem from="1758029238088" duration="3778000" />
+      <workItem from="1758029238088" duration="12316000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -230,7 +219,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758020002155</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Created WebApi layer with endpoints to CRUD the templates, and one to generate pdf file from a template">
+      <option name="closed" value="true" />
+      <created>1758033681225</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1758033681225</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,7 +241,8 @@
     <MESSAGE value="Added domain layer with key entity and domainService to work with" />
     <MESSAGE value="Added application layer with contracts to interact with entities and generate pdf files" />
     <MESSAGE value="Added infrastructure layer with DI container with injected functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added infrastructure layer with DI container with injected functionality" />
+    <MESSAGE value="Created WebApi layer with endpoints to CRUD the templates, and one to generate pdf file from a template" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created WebApi layer with endpoints to CRUD the templates, and one to generate pdf file from a template" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
