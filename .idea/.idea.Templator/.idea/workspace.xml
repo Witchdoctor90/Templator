@@ -10,14 +10,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1202be58-ccc9-4ac6-8132-d45ac5824881" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Templator.Application/Interfaces/IPdfGenerator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Templator.Application/Interfaces/IRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Templator.Application/Interfaces/ITemplateManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Templator.Application/Services/TemplateManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Templator.Infrastructure/DB/ApplicationDbContext.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Templator.Infrastructure/DB/TemplateRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Templator.Infrastructure/DependencyInjection.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Templator.Infrastructure/PdfGenerator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Templator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Templator/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templator.Application/Templator.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Templator.Application/Templator.Application.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templator.Domain/DomainServices/TemplateService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Templator.Domain/DomainServices/TemplateDomainService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templator.Domain/Interfaces/ITemplateService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Templator.Domain/Interfaces/ITemplateDomainService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templator.Application/Interfaces/IRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Templator.Application/Interfaces/IRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templator.Application/Interfaces/ITemplateManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Templator.Application/Interfaces/ITemplateManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templator.Infrastructure/Templator.Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Templator.Infrastructure/Templator.Infrastructure.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +39,13 @@
     "accountId": "200d175b-e160-4109-9b58-85aa6f857505"
   }
 }]]></component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6f90c6c13479b8c2a5be98f3d75dfc3bd885a055652d8a32904ca2448132949e/Future.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="SWEA" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -169,7 +175,7 @@
       <updated>1758006541396</updated>
       <workItem from="1758006546175" duration="781000" />
       <workItem from="1758008594636" duration="1289000" />
-      <workItem from="1758010295224" duration="4846000" />
+      <workItem from="1758010295224" duration="7635000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -187,7 +193,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758011964031</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added application layer with contracts to interact with entities and generate pdf files">
+      <option name="closed" value="true" />
+      <created>1758015773145</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1758015773145</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,7 +213,8 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="init" />
     <MESSAGE value="Added domain layer with key entity and domainService to work with" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added domain layer with key entity and domainService to work with" />
+    <MESSAGE value="Added application layer with contracts to interact with entities and generate pdf files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added application layer with contracts to interact with entities and generate pdf files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

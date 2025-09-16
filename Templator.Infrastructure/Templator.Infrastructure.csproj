@@ -6,4 +6,16 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.20" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.20" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.0-preview.7.25380.108" />
+      <PackageReference Include="PuppeteerSharp" Version="20.2.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Templator.Application\Templator.Application.csproj" />
+      <ProjectReference Include="..\Templator.Domain\Templator.Domain.csproj" />
+    </ItemGroup>
+
 </Project>
