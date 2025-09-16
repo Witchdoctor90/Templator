@@ -1,6 +1,6 @@
 namespace Templator.Domain.Interfaces;
 
-public interface ITemplateService
+public interface ITemplateDomainService
 {
     IEnumerable<string> ExtractPlaceholders(string html);
     

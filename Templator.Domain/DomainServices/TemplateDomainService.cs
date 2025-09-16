@@ -3,7 +3,7 @@ using System.Text.RegularExpressions;
 
 namespace Templator.Domain.DomainServices;
 
-public partial class TemplateService : ITemplateService
+public partial class TemplateDomainService : ITemplateDomainService
 {
     private static readonly Regex PlaceholderRegex = MyRegex();
     
