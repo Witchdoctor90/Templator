@@ -3,11 +3,7 @@ using Templator.Domain;
 
 namespace Templator.Infrastructure.DB;
 
-public class ApplicationDbContext : DbContext
+public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : DbContext(options)
 {
-    public DbSet<Template> Templates { get; }
-
-    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
-    {
-    }
+    public DbSet<Template> Templates { get; set; }
 }

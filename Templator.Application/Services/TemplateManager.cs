@@ -57,6 +57,7 @@ public class TemplateManager(
         {
             return await templateRepository.FindAsync(predicate);
         }
+        
 
         public async Task<byte[]> GeneratePdfAsync(int templateId, Dictionary<string, string> data)
         {
