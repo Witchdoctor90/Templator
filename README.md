@@ -39,18 +39,28 @@ Once filled, the app renders the final document in HTML or converts it to PDF fo
 ## Installation and Running
 
 1. Clone the repository:
-`git clone https://github.com/Witchdoctor90/Templator.git
-cd Templator`
+   
+   `git clone https://github.com/Witchdoctor90/Templator.git`
 
-2. Configure the connection to the Microsoft SQL Server database in the `appsettings.json` configuration file.
-3. Run database migrations:
+   `cd Templator`
+
+3. Configure the connection to the Microsoft SQL Server database in the `appsettings.json` configuration file.
+4. Run database migrations:
+   
    `dotnet ef database update`
-4. Run the ASP.NET Core backend:
+   
+6. Run the ASP.NET Core backend:
+      
    `dotnet run --project Templator.API`
-5. In a separate console, run the React frontend:
-`cd ClientApp
-npm install
-npm start`
+   
+8. In a separate console, run the React frontend:
+   
+   `cd ClientApp`  
+
+   `npm install`  
+
+   `npm start`  
+
 
 
 ---
