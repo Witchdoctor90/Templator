@@ -10,10 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1202be58-ccc9-4ac6-8132-d45ac5824881" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Templator.WebApi/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Templator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Templator/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templator.WebApi/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Templator.WebApi/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templator.WebApi/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/Templator.WebApi/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templator.WebApi/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Templator.WebApi/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compose.yaml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +70,8 @@
     "Docker.Templator.WebApi/Dockerfile final.executor": "Run",
     "Docker.Templator.WebApi/Dockerfile publish.executor": "Run",
     "Docker.Templator.WebApi/Dockerfile.executor": "Run",
+    "Docker.compose.yaml.sqlserver: Compose Deployment.executor": "Run",
+    "Docker.compose.yaml.templator.webapi: Compose Deployment.executor": "Run",
     "Docker.templator-container.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -97,7 +99,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="Docker.templator-container">
+  <component name="RunManager" selected="Docker.compose.yaml.templator.webapi: Compose Deployment">
     <configuration name="Templator.WebApi: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Templator.WebApi/Templator.WebApi.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net8.0" />
@@ -233,8 +235,38 @@
       <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="false" />
       <method v="2" />
     </configuration>
+    <configuration name="compose.yaml.sqlserver: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="sqlserver" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="compose.yaml" />
+        </settings>
+      </deployment>
+      <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="compose.yaml.templator.webapi: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="templator.webapi" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="compose.yaml" />
+        </settings>
+      </deployment>
+      <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="false" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.compose.yaml.templator.webapi: Compose Deployment" />
+        <item itemvalue="Docker.compose.yaml.sqlserver: Compose Deployment" />
         <item itemvalue="Docker.Templator.WebApi/Dockerfile final" />
         <item itemvalue="Docker.Templator.WebApi/Dockerfile publish" />
         <item itemvalue="Docker.Templator.WebApi/Dockerfile build" />
@@ -255,7 +287,7 @@
       <workItem from="1762183448744" duration="355000" />
       <workItem from="1762184203723" duration="367000" />
       <workItem from="1762365750402" duration="645000" />
-      <workItem from="1762628969842" duration="5265000" />
+      <workItem from="1762628969842" duration="10015000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -297,7 +329,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758033681225</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="- Created dockerfile for API environment containerization&#10;- Fixed migrations to be applied automatically">
+      <option name="closed" value="true" />
+      <created>1762684093712</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1762684093712</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -319,7 +359,8 @@
     <MESSAGE value="Added application layer with contracts to interact with entities and generate pdf files" />
     <MESSAGE value="Added infrastructure layer with DI container with injected functionality" />
     <MESSAGE value="Created WebApi layer with endpoints to CRUD the templates, and one to generate pdf file from a template" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created WebApi layer with endpoints to CRUD the templates, and one to generate pdf file from a template" />
+    <MESSAGE value="- Created dockerfile for API environment containerization&#10;- Fixed migrations to be applied automatically" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Created dockerfile for API environment containerization&#10;- Fixed migrations to be applied automatically" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
