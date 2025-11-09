@@ -1,5 +1,7 @@
 using FluentValidation;
+using Microsoft.EntityFrameworkCore;
 using Templator.Infrastructure;
+using Templator.Infrastructure.DB;
 using Templator.WebApi.Controllers;
 using Templator.WebApi.Middleware;
 
@@ -45,6 +47,12 @@ public class Program
         }
         app.UseCors("AllowFrontend");
         app.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
+        
+        using(var scope = app.Services.CreateScope())
+        {
+            var dbcontext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+            dbcontext.Database.Migrate();
+        }
         
         app.Run();
     }
