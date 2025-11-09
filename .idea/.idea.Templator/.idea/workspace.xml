@@ -11,6 +11,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1202be58-ccc9-4ac6-8132-d45ac5824881" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/Templator.WebApi/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Templator.WebApi/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templator-frontend/.env" beforeDir="false" afterPath="$PROJECT_DIR$/templator-frontend/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templator-frontend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/templator-frontend/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -290,7 +292,7 @@
       <workItem from="1762183448744" duration="355000" />
       <workItem from="1762184203723" duration="367000" />
       <workItem from="1762365750402" duration="645000" />
-      <workItem from="1762628969842" duration="13717000" />
+      <workItem from="1762628969842" duration="14253000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -356,7 +358,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762689696079</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Changed cors policy to react release configuration">
+      <option name="closed" value="true" />
+      <created>1762692629033</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1762692629033</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -381,7 +391,8 @@
     <MESSAGE value="- Created dockerfile for API environment containerization&#10;- Fixed migrations to be applied automatically" />
     <MESSAGE value="Final fixing all things wo work" />
     <MESSAGE value="minor fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor fixes" />
+    <MESSAGE value="Changed cors policy to react release configuration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed cors policy to react release configuration" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

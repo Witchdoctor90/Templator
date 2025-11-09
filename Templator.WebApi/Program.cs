@@ -24,7 +24,7 @@ public class Program
             options.AddPolicy(name: "AllowFrontend",
                 policy =>
                 {
-                    policy.WithOrigins("http://templator.frontend:80")  
+                    policy.WithOrigins("http://localhost:80")
                         .AllowAnyHeader()
                         .AllowAnyMethod();
                 });
