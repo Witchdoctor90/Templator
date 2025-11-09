@@ -44,24 +44,9 @@ Once filled, the app renders the final document in HTML or converts it to PDF fo
 
    `cd Templator`
 
-3. Configure the connection to the Microsoft SQL Server database in the `appsettings.json` configuration file.
-4. Run database migrations:
-   
-   `dotnet ef database update`
-   
-6. Run the ASP.NET Core backend:
-      
-   `dotnet run --project Templator.API`
-   
-8. In a separate console, run the React frontend:
-   
-   `cd ClientApp`  
+2. Build with docker-compose
 
-   `npm install`  
-
-   `npm start`  
-
-
+   `docker-compose up -d`
 
 ---
 
