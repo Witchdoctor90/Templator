@@ -19,7 +19,7 @@ Once filled, the app renders the final document in HTML or converts it to PDF fo
 - Create and manage HTML templates stored in a database.
 - Dynamically insert user-provided text into placeholders.
 - Real-time preview of the rendered templates.
-- Export results as HTML or PDF files.
+- Export results as PDF files.
 - Full CRUD API for template management.
 - RESTful design for easy external integration.
 - Client-side form builder automatically detects placeholders.
@@ -55,7 +55,7 @@ Once filled, the app renders the final document in HTML or converts it to PDF fo
 - Create HTML templates with the necessary placeholders (e.g., `{{name}}`).
 - Use the web interface to edit and dynamically fill templates.
 - Preview changes in real-time.
-- Export the final document as HTML or PDF for distribution or storage.
+- Export the final document as PDF for distribution or storage.
 
 ---
 
