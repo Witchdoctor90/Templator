@@ -10,9 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1202be58-ccc9-4ac6-8132-d45ac5824881" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Templator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Templator/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templator-frontend/.env" beforeDir="false" afterPath="$PROJECT_DIR$/templator-frontend/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templator-frontend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/templator-frontend/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templator.WebApi/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Templator.WebApi/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -292,7 +290,7 @@
       <workItem from="1762183448744" duration="355000" />
       <workItem from="1762184203723" duration="367000" />
       <workItem from="1762365750402" duration="645000" />
-      <workItem from="1762628969842" duration="13401000" />
+      <workItem from="1762628969842" duration="13717000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
