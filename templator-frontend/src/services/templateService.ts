@@ -1,19 +1,21 @@
 import {Template} from '../models/template';
 
+const apiBaseUrl = process.env.REACT_APP_API_BASE_URL;
+
 export const getTemplates = async (): Promise<Template[]> => {
-    const response = await fetch('https://localhost:7111/api/Template/GetAll');
+    const response = await fetch(`${apiBaseUrl}/api/Template/GetAll`);
     const data = await response.json();
     return data;
 }
 
 export const getTemplateById = async (id: number): Promise<Template> => {
-    const response = await fetch(`https://localhost:7111/api/Template/Get/${id}`);
+    const response = await fetch(`${apiBaseUrl}/api/Template/Get/${id}`);
     const data = await response.json();
     return data;
 }
 
 export const createTemplate = async (templateData: Omit<Template, 'id'>): Promise<Template> => {
-    const response = await fetch('https://localhost:7111/api/Template/Create', {
+    const response = await fetch(`${apiBaseUrl}/api/Template/Create`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(templateData),
@@ -23,7 +25,7 @@ export const createTemplate = async (templateData: Omit<Template, 'id'>): Promis
 };
 
 export const deleteTemplate = async (id: number): Promise<void> => {
-    const response = await fetch(`https://localhost:7111/api/Template/Delete/?id=${id}`, {
+    const response = await fetch(`${apiBaseUrl}/api/Template/Delete/?id=${id}`, {
         method: 'DELETE',
     });
     if (!response.ok) throw new Error('Помилка при видаленні шаблону');
@@ -40,7 +42,7 @@ export const extractPlaceholders = async (template: string): Promise<string[]> =
   }
 
   export async function generatePdf(id: number, data: Record<string, string>): Promise<Blob> {
-  const response = await fetch(`https://localhost:7111/api/Template/GeneratePdf?id=${id}`, {
+  const response = await fetch(`${apiBaseUrl}/api/Template/GeneratePdf?id=${id}`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -55,7 +57,7 @@ export const extractPlaceholders = async (template: string): Promise<string[]> =
 }
 
 export const updateTemplate = async (template: Template): Promise<Template> => {
-    const response = await fetch('https://localhost:7111/api/Template/Update', {
+    const response = await fetch(`${apiBaseUrl}/api/Template/Update`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(template),

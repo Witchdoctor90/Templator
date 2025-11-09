@@ -1,0 +1,21 @@
+# This is a generated file. Not intended for manual editing.
+services:
+  templator.webapi:
+    build:
+      context: "/home/admin/RiderProjects/Templator"
+      dockerfile: "Templator.WebApi/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net8.0/Templator.WebApi.dll"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "templator.webapi:dev"
+    ports: []
+    volumes:
+    - "/home/admin/RiderProjects/Templator/Templator.WebApi:/app:rw"
+    - "/home/admin/RiderProjects/Templator:/src:rw"
+    - "/home/admin/.nuget/packages:/home/app/.nuget/packages"
+    working_dir: "/app"

@@ -11,9 +11,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1202be58-ccc9-4ac6-8132-d45ac5824881" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Templator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Templator/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templator.WebApi/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/Templator.WebApi/appsettings.Development.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templator.WebApi/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Templator.WebApi/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/compose.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templator-frontend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/templator-frontend/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,8 +38,8 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6f90c6c13479b8c2a5be98f3d75dfc3bd885a055652d8a32904ca2448132949e/Future.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c69576b4a074ad2839225611609498e344b7e2819997af48dbb2d2f8257f3/EntityFrameworkQueryableExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///home/admin/RiderProjects/Templator/Templator.WebApi/appsettings.Development.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///home/admin/RiderProjects/Templator/Templator.WebApi/appsettings.json" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
@@ -48,7 +47,7 @@
 }</component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="SWEA" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
@@ -71,7 +70,9 @@
     "Docker.Templator.WebApi/Dockerfile publish.executor": "Run",
     "Docker.Templator.WebApi/Dockerfile.executor": "Run",
     "Docker.compose.yaml.sqlserver: Compose Deployment.executor": "Run",
+    "Docker.compose.yaml.templator.frontend: Compose Deployment.executor": "Run",
     "Docker.compose.yaml.templator.webapi: Compose Deployment.executor": "Run",
+    "Docker.compose.yaml: Compose Deployment.executor": "Run",
     "Docker.templator-container.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -91,6 +92,7 @@
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "SolutionBuilderGeneralOptionsPage",
     "to.speed.mode.migration.done": "true",
+    "ts.external.directory.path": "/home/admin/.local/share/JetBrains/Toolbox/apps/rider/plugins/javascript-plugin/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -99,7 +101,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="Docker.compose.yaml.templator.webapi: Compose Deployment">
+  <component name="RunManager" selected="Docker.compose.yaml.templator.frontend: Compose Deployment">
     <configuration name="Templator.WebApi: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Templator.WebApi/Templator.WebApi.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net8.0" />
@@ -147,19 +149,6 @@
       <method v="2">
         <option name="Build" />
       </method>
-    </configuration>
-    <configuration name="Templator.WebApi/Dockerfile build" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
-      <deployment type="dockerfile">
-        <settings>
-          <option name="imageTag" value="mcr.microsoft.comdotnetsdk8.0_build" />
-          <option name="buildCliOptions" value="--target build" />
-          <option name="buildOnly" value="true" />
-          <option name="contextFolderPath" value="$PROJECT_DIR$" />
-          <option name="sourceFilePath" value="Templator.WebApi/Dockerfile" />
-        </settings>
-      </deployment>
-      <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="false" />
-      <method v="2" />
     </configuration>
     <configuration name="Templator.WebApi/Dockerfile final" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
       <deployment type="dockerfile">
@@ -249,6 +238,20 @@
       <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="false" />
       <method v="2" />
     </configuration>
+    <configuration name="compose.yaml.templator.frontend: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="templator.frontend" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="compose.yaml" />
+        </settings>
+      </deployment>
+      <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="false" />
+      <method v="2" />
+    </configuration>
     <configuration name="compose.yaml.templator.webapi: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
@@ -265,11 +268,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.compose.yaml.templator.frontend: Compose Deployment" />
         <item itemvalue="Docker.compose.yaml.templator.webapi: Compose Deployment" />
         <item itemvalue="Docker.compose.yaml.sqlserver: Compose Deployment" />
         <item itemvalue="Docker.Templator.WebApi/Dockerfile final" />
         <item itemvalue="Docker.Templator.WebApi/Dockerfile publish" />
-        <item itemvalue="Docker.Templator.WebApi/Dockerfile build" />
       </list>
     </recent_temporary>
   </component>
@@ -287,7 +290,7 @@
       <workItem from="1762183448744" duration="355000" />
       <workItem from="1762184203723" duration="367000" />
       <workItem from="1762365750402" duration="645000" />
-      <workItem from="1762628969842" duration="10015000" />
+      <workItem from="1762628969842" duration="12695000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -337,7 +340,23 @@
       <option name="project" value="LOCAL" />
       <updated>1762684093712</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Final fixing all things wo work">
+      <option name="closed" value="true" />
+      <created>1762688964144</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1762688964144</updated>
+    </task>
+    <task id="LOCAL-00008" summary="minor fixes">
+      <option name="closed" value="true" />
+      <created>1762689696079</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1762689696079</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -360,7 +379,9 @@
     <MESSAGE value="Added infrastructure layer with DI container with injected functionality" />
     <MESSAGE value="Created WebApi layer with endpoints to CRUD the templates, and one to generate pdf file from a template" />
     <MESSAGE value="- Created dockerfile for API environment containerization&#10;- Fixed migrations to be applied automatically" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Created dockerfile for API environment containerization&#10;- Fixed migrations to be applied automatically" />
+    <MESSAGE value="Final fixing all things wo work" />
+    <MESSAGE value="minor fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor fixes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

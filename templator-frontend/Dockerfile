@@ -9,7 +9,7 @@ COPY package*.json ./
 RUN npm install
 
 # Копіюємо увесь код проєкту
-ENV REACT_APP_API_BASE_URL=http://localhost:8080
+ENV REACT_APP_API_BASE_URL=http://templator-container:8080
 COPY . .
 
 # Збираємо додаток для продакшену
