@@ -24,7 +24,7 @@ public class Program
             options.AddPolicy(name: "AllowFrontend",
                 policy =>
                 {
-                    policy.WithOrigins("http://localhost")
+                    policy.WithOrigins("https://red-moss-07eb03a10.3.azurestaticapps.net")
                         .AllowAnyHeader()
                         .AllowAnyMethod();
                 });
