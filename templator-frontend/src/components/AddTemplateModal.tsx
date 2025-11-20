@@ -20,9 +20,7 @@ const AddTemplateModal: React.FC<AddTemplateModalProps> = ({ isOpen, onClose, on
       alert('Будь ласка, введіть назву шаблону');
       return;
     }
-    createTemplate({ name, htmlContent }).then(() => {
-      onAdd({ name, htmlContent });
-    });
+    onAdd({ name, htmlContent });
     setName('');
     setHtmlContent('');
     onClose();
