@@ -15,20 +15,25 @@ public class Program
         var builder = WebApplication.CreateBuilder(args);
         
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+        builder.Configuration.AddEnvironmentVariables();
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
         builder.Services.AddInfrastructure(builder.Configuration);
-        
-        builder.Services.AddCors(options =>
+
+        if (builder.Configuration["CLIENT_APP_BASE_URL"] is not null)
         {
-            options.AddPolicy(name: "AllowFrontend",
-                policy =>
-                {
-                    policy.WithOrigins("https://red-moss-07eb03a10.3.azurestaticapps.net")
-                        .AllowAnyHeader()
-                        .AllowAnyMethod();
-                });
-        });
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy(name: "AllowFrontend",
+                    policy =>
+                    {
+                        policy.WithOrigins(builder.Configuration["CLIENT_APP_BASE_URL"])
+                            .AllowAnyHeader()
+                            .AllowAnyMethod();
+                    });
+            });
+        }
+        
         
         builder.Services.AddControllers();
         builder.Services.AddValidatorsFromAssemblyContaining<TemplateDataValidator>();
