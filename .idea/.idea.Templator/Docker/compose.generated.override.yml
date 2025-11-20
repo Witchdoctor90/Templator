@@ -5,17 +5,33 @@ services:
       context: "/home/admin/RiderProjects/Templator"
       dockerfile: "Templator.WebApi/Dockerfile"
       target: "base"
+      args:
+        BUILD_CONFIGURATION: "Debug"
     command: []
     entrypoint:
-    - "dotnet"
-    - "/app/bin/Debug/net8.0/Templator.WebApi.dll"
+    - "/opt/JetBrains/RiderDebuggerTools/linux-x64/JetBrains.Debugger.Worker"
+    - "--runtimeconfig"
+    - "/opt/JetBrains/RiderDebuggerTools/JetBrains.Debugger.Worker.runtimeconfig.json"
+    - "--mode=server"
+    - "--frontend-port=57000"
+    - "--backend-port=57200"
+    - "--roslyn-worker-port=57400"
+    - "--timeout=60"
     environment:
       ASPNETCORE_ENVIRONMENT: "Development"
       DOTNET_USE_POLLING_FILE_WATCHER: "true"
+      RIDER_DEBUGGER_LOG_DIR: "/var/opt/JetBrains/RiderDebuggerTools"
+      RESHARPER_LOG_CONF: "/etc/opt/JetBrains/RiderDebuggerTools/backend-log.xml"
     image: "templator.webapi:dev"
-    ports: []
+    ports:
+    - "127.0.0.1:57000:57000"
+    - "127.0.0.1:57200:57200"
+    - "127.0.0.1:57400:57400"
     volumes:
     - "/home/admin/RiderProjects/Templator/Templator.WebApi:/app:rw"
     - "/home/admin/RiderProjects/Templator:/src:rw"
     - "/home/admin/.nuget/packages:/home/app/.nuget/packages"
+    - "/home/admin/.local/share/JetBrains/RiderRemoteDebugger/2025.2.4/Linux64:/opt/JetBrains/RiderDebuggerTools"
+    - "/home/admin/.local/share/JetBrains/Toolbox/apps/rider/bin/backend-log.xml:/etc/opt/JetBrains/RiderDebuggerTools/backend-log.xml"
+    - "/home/admin/.cache/JetBrains/Rider2025.2/log/DebuggerWorker/JetBrains.Debugger.Worker.2025_11_20_14_29_01:/var/opt/JetBrains/RiderDebuggerTools:rw"
     working_dir: "/app"

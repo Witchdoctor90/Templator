@@ -15,8 +15,8 @@ public static class DependencyInjection
     public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddDbContext<ApplicationDbContext>(opts =>
-            opts.UseSqlServer(configuration.GetConnectionString("DBConnection"),
-                sqloptions => sqloptions.MigrationsAssembly("Templator.WebApi")));
+            opts.UseNpgsql(configuration.GetConnectionString("DBConnection"),
+                sqloptions => sqloptions.MigrationsAssembly("Templator.Infrastructure")));
         //domain
         services.AddScoped<ITemplateDomainService,  TemplateDomainService>();
         //application
